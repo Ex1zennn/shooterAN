@@ -21,6 +21,7 @@ class GameSprite(sprite.Sprite):
         self.rect = self.image.get_rect()  #отримуємо прямокутну область розміру картинки
         self.rect.x = x  #задаємо початкові координати спрайту
         self.rect.y = y
+        self.mask = mask.from_surface(self.image)
 
     def draw(self):
         #відрисовуємо у вікні картинку self.image в координатах self.rect
